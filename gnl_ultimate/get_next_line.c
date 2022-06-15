@@ -11,7 +11,7 @@ char	*get_next_line(int fd)
 	ligne = NULL;
 	ligne = ft_strjoin(ligne, buffer);
 	size_read = BUFFER_SIZE;
-	while (!(end_line(ligne) || size_read != BUFFER_SIZE))
+	while (!(end_line(ligne) || size_read != BUFFER_SIZE)
 	{
 		size_read = read(fd, buffer, BUFFER_SIZE);
 		if (size_read < 0)
